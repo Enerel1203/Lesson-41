@@ -4,8 +4,8 @@ from tkinter.filedialog import askopenfilename, asksaveasfilename
 window = Tk()
 window.title("Condingal's text editor")
 window.geometry("600x500")
-window.rowconfigure(0, minsize=800, weight=1)
-window.columnconfigure(1, minsize=800, weight=1)
+window.rowconfigure(0, minsize=500, weight=1)
+window.columnconfigure(1, minsize=500, weight=1)
 
 def open_file():
     filepath = askopenfilename(filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
@@ -29,8 +29,8 @@ def save_file():
 
 txt_edit= Text(window)
 fr_buttons = Frame(window, relief=RAISED, bd=2)
-btn_open = Button(fr_buttons, texts="Open", command=open_file)
-btn_save = Button(fr_buttons, texts="Save As...", command=save_file)
+btn_open = Button(fr_buttons, text="Open", command=open_file)
+btn_save = Button(fr_buttons, text="Save As...", command=save_file)
 
 btn_open.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
 btn_save.grid(row=1, column=0, sticky="ew", padx=5, pady=5)
